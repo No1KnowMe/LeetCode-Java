@@ -18,7 +18,7 @@ class TwoSumTest {
         String testResult = TwoSum.getResult(testNums, testTarget);
 
         assertEquals(message, testResult);
-        String result = (message.equals(testResult)) ? "TEST PASSED" : "TEST FAILED";
+        String result = (message.equals(testResult)) ? "TEST 1 PASSED" : "TEST 1 FAILED";
         System.out.println(result);
     }
 
@@ -30,7 +30,7 @@ class TwoSumTest {
         String testResult = TwoSum.getResult(testNums, testTarget);
 
         assertEquals(message, testResult);
-        String result = (message.equals(testResult)) ? "TEST PASSED" : "TEST FAILED";
+        String result = (message.equals(testResult)) ? "TEST 2 PASSED" : "TEST 2 FAILED";
         System.out.println(result);
     }
 }
