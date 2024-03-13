@@ -29,7 +29,8 @@ public class ReverseInteger {
 
     /**
      * Get user's prompt from console.
-     * @return int value of prompt.*/
+     * @return int value of prompt.
+     * */
     public static int getUserPrompt () {
         System.out.print("Please, type a number to reverse: ");
         Scanner scanner = new Scanner(System.in);
@@ -42,6 +43,11 @@ public class ReverseInteger {
         }
     }
 
+    /**
+     * Reverse digits of integer.
+     * @param number int value to reverse.
+     * @return reversed int value.
+     * */
     public static int reverse (int number) {
         long out = 0;
         while (number != 0) {
