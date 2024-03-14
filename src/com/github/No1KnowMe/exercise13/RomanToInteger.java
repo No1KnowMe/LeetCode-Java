@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class RomanToInteger {
 
-    /* TODO:Given a roman numeral, convert it to an integer.
+    /* TODO: Given a roman numeral, convert it to an integer.
      * Roman numeral are represented by seven different symbols:
      * "I" (1), "V" (5), "X" (10), "L" (50), "C" (100), "D" (500) and "M" (1000).
      *
