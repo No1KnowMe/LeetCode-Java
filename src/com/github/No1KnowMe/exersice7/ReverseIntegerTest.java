@@ -1,52 +1,24 @@
 package com.github.No1KnowMe.exersice7;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class ReverseIntegerTest {
 
-    @Test
-    void reverse_EXAMPLE_1() {
-        int testInput = 123;
-        int testOutput = 321;
-        int actualOutput = ReverseInteger.reverse(testInput);
-
-        assertEquals(testOutput, actualOutput);
-        String result = (testOutput == actualOutput) ? "TEST 1 PASSED" : "TEST 1 FAILED";
-        System.out.println(result);
-    }
-
-    @Test
-    void reverse_EXAMPLE_2() {
-        int testInput = -123;
-        int testOutput = -321;
-        int actualOutput = ReverseInteger.reverse(testInput);
-
-        assertEquals(testOutput, actualOutput);
-        String result = (testOutput == actualOutput) ? "TEST 2 PASSED" : "TEST 2 FAILED";
-        System.out.println(result);
-    }
-
-    @Test
-    void reverse_EXAMPLE_3() {
-        int testInput = 120;
-        int testOutput = 21;
-        int actualOutput = ReverseInteger.reverse(testInput);
-
-        assertEquals(testOutput, actualOutput);
-        String result = (testOutput == actualOutput) ? "TEST 3 PASSED" : "TEST 3 FAILED";
-        System.out.println(result);
-    }
-
-    @Test
-    void reverse_EXAMPLE_4() {
-        int testInput = 1000000003;
-        int testOutput = 0;
-        int actualOutput = ReverseInteger.reverse(testInput);
-
-        assertEquals(testOutput, actualOutput);
-        String result = (testOutput == actualOutput) ? "TEST 4 PASSED" : "TEST 4 FAILED";
-        System.out.println(result);
+    @DisplayName("Reverse an int number. If a reversed int is bigger than range then result 0.")
+    @ParameterizedTest(name = "{0} is a reversed {1}")
+    @CsvSource({
+            "123, 321",
+            "-123, -321",
+            "120, 21",
+            "1000000003, 0"
+    })
+    void reverse(int number, int expectedResult) {
+        assertEquals(expectedResult, ReverseInteger.reverse(number),
+                () -> number + " should be a reversed " + expectedResult);
     }
 }
